@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Shaghfa 💕</title>
+  <style>
+    body { margin:0; font-family:'Poppins', sans-serif; text-align:center; overflow-x:hidden; }
+    header { background:rgba(0,0,0,0.5); padding:1rem; position:fixed; top:0; left:0; width:100%; z-index:1000; }
+    nav a { margin:0 15px; text-decoration:none; color:#fff; font-weight:bold; cursor:pointer; }
+
+    section { display:none; min-height:100vh; padding:100px 20px; }
+    section.active { display:block; }
+
+    /* Glow effect */
+    .glow {
+      color: #fff;
+      text-shadow: 0 0 10px #ff5e78, 0 0 20px #ff5e78, 0 0 30px #ff5e78;
+      animation: glowPulse 2s infinite;
+    }
+    @keyframes glowPulse {
+      0%,100% { text-shadow: 0 0 10px #ff5e78, 0 0 20px #ff5e78, 0 0 30px #ff5e78; }
+      50% { text-shadow: 0 0 20px #fff, 0 0 40px #ff5e78, 0 0 60px #ff5e78; }
+    }
+
+    /* Home */
+    #home { background:linear-gradient(120deg, #ff9a9e, #fad0c4); color:#fff; }
+    h1 { font-size:3rem; }
+    .btn { display:inline-block; margin-top:20px; padding:12px 24px; background:#ff5e78; border-radius:30px; color:#fff; font-weight:bold; text-decoration:none; }
+
+    /* Gallery */
+    .gallery { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin:20px; }
+    .gallery img { width:250px; height:200px; object-fit:cover; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.3); }
+
+    /* Hearts floating */
+    #hearts-container {
+      position: fixed; top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none; overflow: hidden; z-index: 0;
+    }
+    .heart-shape {
+      position: absolute; font-size: 2rem; color: red;
+      animation: floatUp 6s linear infinite;
+    }
+    @keyframes floatUp {
+      from { transform: translateY(100vh) scale(1); opacity:1; }
+      to { transform: translateY(-10vh) scale(1.5); opacity:0; }
+    }
+
+    /* Surprise */
+    #surprise { background:linear-gradient(to right,#f7797d,#FBD786,#C6FFDD); position:relative; }
+    .heart { font-size:5rem; color:red; animation:beat 1s infinite; z-index:10; }
+    @keyframes beat { 0%,100%{ transform:scale(1);} 50%{ transform:scale(1.3);} }
+
+    /* Confetti canvas */
+    #confetti { position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a onclick="showSection('home')">Home</a>
+      <a onclick="showSection('story')">Our Story</a>
+      <a onclick="showSection('gallery')">Gallery</a>
+      <a onclick="showSection('wishes')">Wishes</a>
+      <a onclick="showSection('surprise')">Surprise</a>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <section id="home" class="active">
+    <h1 class="glow">Happy Birthday 🎂 Shaghfa Gul Paracha GULLEY💕</h1>
+    <p>Today we celebrate YOU and all the joy you bring 💖</p>
+    <p>Today we celebrate YOU, the love of my life.
+
+You bring endless joy to my world every single day.
+
+Your smile brightens even the darkest moments.
+
+Your kindness makes life more beautiful.
+
+Every heartbeat of mine whispers your name.
+
+With you, every memory feels magical.
+
+You are my safe place, my strength, my happiness.
+
+This day is special because it gave me you.
+
+I pray your life is filled with love, laughter, and peace.
+
+Happy Birthday, my forever love 💖💖</p>
+    <a onclick="showSection('story')" class="btn">See Our Story</a>
+    <canvas id="confetti"></canvas>
+  </section>
+
+  <!-- STORY -->
+  <section id="story">
+    <h2 class="glow">Our Beautiful Journey 💖</h2>
+    <p>From the first smile to today, every moment with you has been magic ✨</p>
+    <p>You make my world brighter every single day 💕</p>
+    <P>My love, today is all about celebrating you and the incredible light you bring into my life. You are the reason my days are filled with laughter, warmth, and endless happiness. Every moment spent with you is a blessing that I cherish with all my heart. Your smile has the power to turn the simplest day into something magical, and your love gives me strength in every step I take. I am so grateful for the countless memories we’ve created together and excited for all the beautiful ones yet to come. You are not just my wife, you are my best friend, my inspiration, and my forever home. On this special day, I wish for you nothing but pure joy and endless love. May your dreams take flight and your heart always feel surrounded by happiness. You deserve the world and so much more, my darling. Happy Birthday, my sweetest Shaghfa 💖</P>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <h2 class="glow">Memories Together 📷</h2>
+    <div class="gallery">
+      <img src="img.JPG" alt="Memory 1">
+      <img src="img1.jpg" alt="Memory 2">
+      <img src="img2.jpg" alt="Memory 3">
+       <img src="img3.jpg" alt="Memory 4">
+        <img src="img4.jpg" alt="Memory 5">
+         <img src="img5.jpg" alt="Memory 6">
+          <img src="img6.jpg" alt="Memory 7">
+           <img src="img7.jpg" alt="Memory 8">
+            <img src="img8.jpg" alt="Memory 9">
+             <img src="img9.jpg" alt="Memory 10">
+    </div>
+  </section>
+<style>
+/* Gallery Styling */
+#gallery {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+#gallery h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #ff66b2;
+  text-shadow: 0 0 12px #ff99cc;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* narrower columns */
+  gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 500px; /* taller */
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.55);
+}
+</style>
+  <!-- WISHES -->
+  <section id="wishes">
+    <h2 class="glow">My Birthday Wishes to You 🎉</h2>
+    <p>💖 May your day be as beautiful as your smile.</p>
+    <p>🌸 May our love grow stronger with every heartbeat.</p>
+    <p>🎁 May all your dreams come true, my love.</p>
+    <P>Happy Birthday, my love 💖
+
+Wishing you endless happiness today 🌸
+
+You are my heart, my everything 💕
+
+May your smile never fade 🌟
+
+Happy Birthday to my queen 👑
+
+You are my forever sunshine ☀️
+
+Every day with you is a gift 🎁
+
+You deserve the world 🌍
+
+My love grows stronger each day 💖
+
+You’re my reason to smile 😊
+
+Happy Birthday, my soulmate 💕
+
+Your laughter is my melody 🎶
+
+You’re my dream come true 💫
+
+Life is beautiful with you 💕
+
+You’re my safe place 🏡
+
+Happy Birthday, my angel 😇
+
+May all your dreams come true 🌸
+
+You’re my best friend forever 💕
+
+My heart beats only for you 💓
+
+Wishing you love and joy today 🌹
+
+You’re the love of my life 💖
+
+Happy Birthday, beautiful 🌷
+
+You’re my greatest blessing 🙏
+
+My love for you is endless 💞
+
+You complete my world 🌍
+
+Wishing you pure happiness 🌸
+
+You’re my guiding star ⭐
+
+Happy Birthday, sweetheart 💕
+
+You’re my forever love 💓
+
+Your love is my treasure 💎
+
+You’re the light of my life 🌟
+
+Happy Birthday, darling 💖
+
+I love you more each day 💕
+
+You are my joy 💞
+
+You make life magical ✨
+
+Wishing you peace and love 🌸
+
+You’re my eternal happiness 💖
+
+You’re my sunshine and moonlight 🌙☀️
+
+Happy Birthday, my love 🌹
+
+You’re my best gift ever 🎁
+
+Life is sweeter with you 🍯
+
+You’re my princess 👑
+
+You make my soul shine 🌟
+
+Happy Birthday, angel 💕
+
+I’m so lucky to have you 🍀
+
+You are my heartbeat 💓
+
+My love belongs to you 💖
+
+Happy Birthday, my flower 🌸
+
+You’re my strength 💪
+
+You’re my forever wish 💫
+
+You’re my miracle 💕
+
+My heart is yours forever 💓
+
+Happy Birthday, sweetheart 🌷
+
+You’re my true love 💖
+
+You are my sunshine ☀️
+
+You’re my everything 💞
+
+Happy Birthday, my darling 🌹
+
+You’re my forever dream 💫
+
+You make life beautiful 💕
+
+You’re my endless love 💖
+
+You are my soul 💓
+
+You’re my reason to live 💕
+
+Happy Birthday, love 🌸
+
+You’re my angel on earth 😇
+
+You’re my happiness 💖
+
+You’re my sweetest dream 💕
+
+Happy Birthday, baby 💞
+
+You’re my light in the dark 🌟
+
+You’re my destiny 💓
+
+You’re my heart’s desire 💖
+
+You’re my paradise 🌴
+
+Happy Birthday, darling 💕
+
+You’re my forever joy 🌸
+
+You’re my one and only 💖
+
+You’re my star ⭐
+
+You’re my blessing 💕
+
+Happy Birthday, love 🌷
+
+You’re my perfect match 💞
+
+You’re my angel of love 😇
+
+You’re my sweetest gift 🎁
+
+You’re my dream girl 💖
+
+Happy Birthday, sunshine ☀️
+
+You’re my smile 😊
+
+You’re my peace 💕
+
+You’re my forever kiss 💋
+
+You’re my soul’s happiness 💓
+
+Happy Birthday, angel 🌹
+
+You’re my beautiful queen 👑
+
+You’re my greatest joy 💞
+
+You’re my life 💖
+
+You’re my sweet flower 🌸
+
+Happy Birthday, my love 💕
+
+You’re my treasure 💎
+
+You’re my perfect love 💖
+
+You’re my forever blessing 🙏
+
+You’re my sweetest heart 💓
+
+You’re my endless dream 💫
+
+You’re my soulmate 💕
+
+You’re my forever light 🌟
+
+Happy Birthday, my dearest love 💖</P>
+  </section>
+
+ <!-- SURPRISE -->
+<section id="surprise">
+  <h2 class="glow">A Special Surprise 💝</h2>
+  <p>
+    You are my everything, Shaghfa. I love you forever. You are my everything, Shaghfa, 
+    the most precious part of my life and the reason my world feels so complete. From the 
+    very first moment you became a part of my life, everything changed for the better. 
+    Your love has filled my heart with peace, happiness, and hope, and I cannot imagine 
+    a single day without you by my side. You are my greatest blessing, my best friend, 
+    my safe place, and my soulmate. When I look at you, I see not just the woman I love, 
+    but the person who makes me want to be the best version of myself. You inspire me 
+    with your kindness, your strength, and your endless beauty—both inside and out. 
+    Every smile of yours lights up my world, every word of yours comforts my soul, 
+    and every little gesture reminds me how lucky I am to have you.
+    <br><br>
+    Shaghfa, I want you to know that my love for you is not bound by time, distance, 
+    or circumstances. It grows stronger with every sunrise and shines brighter with 
+    every sunset. No matter what challenges life may bring, I promise to stand with you, 
+    to protect you, to cherish you, and to love you unconditionally. You are the reason 
+    I believe in love, the reason I dream, and the reason I feel truly alive. 
+    My heart belongs to you today, tomorrow, and for all the days to come. 
+    I pray that your life is always filled with happiness, success, and love, 
+    and I promise that as long as I breathe, I will do everything in my power 
+    to keep a smile on your face. You are my forever love, my everything, 
+    my one and only Shaghfa. I love you endlessly, now and always. 💕
+  </p>
+
+  <!-- Floating Heart -->
+  <div class="heart">❤</div>
+  <div id="hearts-container"></div>
+
+  <!-- Background music (Bollywood Song) -->
+  <audio autoplay loop controls>
+    <source src="rabta.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</section>
+
+<style>
+/* Surprise Styling */
+#surprise {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  margin: 40px auto;
+  max-width: 900px;
+}
+
+#surprise h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #ff4081;
+  text-shadow: 0 0 10px #ff99cc;
+}
+
+#surprise p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.heart {
+  font-size: 3em;
+  color: red;
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+/* Floating hearts container */
+#hearts-container {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+</style>
+
+
+  <script>
+    // Section switcher
+    function showSection(id) {
+      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+
+    // 🎉 Confetti effect
+    const canvas = document.getElementById("confetti");
+    if (canvas) {
+      const ctx = canvas.getContext("2d");
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      const confettiPieces = Array.from({ length: 150 }, () => ({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        r: Math.random() * 6 + 2,
+        d: Math.random() * 0.5 + 0.5,
+        color: `hsl(${Math.random() * 360}, 100%, 50%)`
+      }));
+
+      function drawConfetti() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        confettiPieces.forEach(p => {
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2, false);
+          ctx.fillStyle = p.color;
+          ctx.fill();
+        });
+        updateConfetti();
+      }
+
+      function updateConfetti() {
+        confettiPieces.forEach(p => {
+          p.y += p.d * 3;
+          if (p.y > canvas.height) {
+            p.y = -10;
+            p.x = Math.random() * canvas.width;
+          }
+        });
+      }
+
+      setInterval(drawConfetti, 30);
+    }
+
+    // 💕 Floating hearts
+    const heartsContainer = document.getElementById("hearts-container");
+    if (heartsContainer) {
+      setInterval(() => {
+        const heart = document.createElement("div");
+        heart.classList.add("heart-shape");
+        heart.innerHTML = "❤";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = Math.random() * 20 + 20 + "px";
+        heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+        heartsContainer.appendChild(heart);
+        setTimeout(() => heart.remove(), 6000);
+      }, 500);
+    }
+  </script>
+</body>
+</html>
